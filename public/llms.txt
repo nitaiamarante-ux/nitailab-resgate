@@ -1,69 +1,55 @@
-# Nitai Lab
+# Resgate seu Google — Nitai Lab
 
-> Agência de marketing digital exclusiva para clínicas de estética em São Paulo. Combinamos inteligência artificial, dados e estratégia para transformar a presença digital de clínicas que querem atrair mais pacientes qualificados.
+> Resgate seu Google é um produto da Nitai Lab voltado a donos de negócio local — clínica, oficina, restaurante, pet shop, academia, loja, dentista — cujo perfil no Google Maps (Google Business Profile) está abandonado, desatualizado ou perdendo descoberta para concorrentes da mesma região.
 
-## Sobre a Nitai Lab
+## Sobre o produto
 
-A Nitai Lab é uma agência brasileira de marketing digital que atende exclusivamente clínicas de estética na cidade de São Paulo, SP. Fundada por Nitai Amarante, profissional com 16 anos de experiência liderando operações em uma das maiores empresas do Brasil (18 promoções), que aplicou sua expertise em processos, dados e gestão ao mercado de estética.
+O Resgate seu Google entrega gestão técnica completa do perfil Google Business Profile do cliente. O foco é fazer com que quem busca o serviço naquela cidade encontre o cliente antes de encontrar o concorrente. Operação remota, sem o dono precisar mexer no dia a dia.
 
-A empresa se diferencia por:
-- Especialização vertical: atende apenas clínicas de estética (botox, preenchimento, harmonização, skincare, laser, bioestimuladores)
-- Inteligência artificial: utiliza IA para pesquisa, diagnóstico e otimização de cada cliente
-- Conhecimento profundo de compliance: CFM, COFEN, políticas do Meta e Google para o nicho
-- Relatórios em linguagem de clínica: custo por paciente nova, agendamentos, não métricas de marketing
-- Dados do cliente pertencem ao cliente
-- Número limitado de clientes por região para garantir exclusividade
-- Decisões baseadas em dados, nunca achismo
+A operação é conduzida por Nitai Amarante (Nitai Morais), com base em Minas Gerais e atuação nacional.
+
+## Para quem é
+
+- Dono de negócio local com perfil no Google Maps abandonado ou desatualizado
+- Quem perde clientes para o concorrente que aparece primeiro na busca
+- Quem não tem tempo nem interesse em mexer no perfil sozinho
+- Quem quer entender, em linguagem de negócio, o que está acontecendo
+
+## Para quem NÃO é
+
+- E-commerce puro, infoproduto, serviços 100% remotos sem geografia
+- Quem busca tráfego pago, gestão de redes sociais ou criação de conteúdo viral
+
+## O que o serviço entrega
+
+- Auditoria do perfil Google Business Profile e mapeamento das perdas atuais
+- Otimização das informações principais (categoria, descrição, atributos, horário, fotos)
+- Gestão de avaliações: estímulo coordenado a novas avaliações e respostas
+- Postagens regulares no perfil (atualizações, ofertas, eventos)
+- Acompanhamento de descoberta na busca local
+- Relatório mensal em linguagem de dono, não de marketing
+
+## Modelos de contratação
+
+- Pagamento mensal recorrente
+- Plataforma Hotmart para checkout self-service
+- Atendimento e onboarding por WhatsApp e e-mail
 
 ## Localização e atendimento
 
-- Área de atendimento: São Paulo, SP, Brasil
-- Horário: Segunda a Sexta, 09:00 - 18:00
-- Modelo: atendimento remoto com foco em clínicas de estética de São Paulo
-
-## Serviços
-
-- Gestão de Google Meu Negócio (otimização completa, posts, reviews, relatórios mensais)
-- Tráfego pago para estética (Meta Ads + Google Ads com compliance do nicho)
-- SEO local (posicionamento orgânico nas buscas locais do Google)
-- Criação de conteúdo (estratégico para redes sociais e blog)
-- E-mail marketing (campanhas segmentadas para nutrição e conversão)
-- Marketing de mídia social (gestão estratégica de Instagram)
-- Consultoria de estratégia (diagnóstico completo e plano personalizado)
-- Criativos (artes, vídeos e copies para campanhas)
-- Landing pages (páginas por procedimento)
-- Identidade visual (brandbook completo)
-- Site profissional
-
-## Produtos
-
-- Resgate seu Google: serviço de otimização de Google Meu Negócio por R$197/mês. Inclui audit completo, otimização de perfil, posts semanais, resposta a reviews e relatório mensal de performance.
+- Base: Minas Gerais, Brasil
+- Atuação: nacional
+- Modelo: 100% remoto
+- Horário comercial: Segunda a Sexta
 
 ## Contato
 
-- Site: https://www.nitailab.com.br
-- Telefone: +55 11 5286-5757
-- Email: comercial@nitailab.com.br
-- Instagram: @nitai.trafegopago
+- Site: https://resgateseugoogle.nitailab.com.br
+- E-mail: comercial@nitailab.com.br
+- WhatsApp: (11) 5286-5757
 
-## Páginas principais
+## Marca
 
-- [Home](https://www.nitailab.com.br/)
-- [Sobre](https://www.nitailab.com.br/sobre/)
-- [Serviços](https://www.nitailab.com.br/servicos/)
-- [Blog](https://www.nitailab.com.br/blog/)
-- [Resgate seu Google](https://www.nitailab.com.br/resgate-seu-google/)
-
-## Perguntas frequentes
-
-P: Quanto custa o serviço da Nitai Lab?
-R: A Nitai Lab trabalha com cardápio de serviços, sem pacotes. Cada clínica recebe uma proposta personalizada após diagnóstico gratuito. O produto Resgate seu Google começa em R$197/mês.
-
-P: A Nitai Lab atende apenas clínicas de estética?
-R: Sim. A especialização vertical permite entregar resultados superiores comparado a agências generalistas.
-
-P: A Nitai Lab atende fora de São Paulo?
-R: O foco principal é São Paulo capital, mas o produto Resgate seu Google (gestão de Google Meu Negócio) atende clínicas em qualquer região do Brasil.
-
-P: O que diferencia a Nitai Lab de outras agências?
-R: Especialização exclusiva em estética, uso de inteligência artificial para diagnóstico e otimização, número limitado de clientes por região, e relatórios em linguagem de negócio (pacientes novas, agendamentos) ao invés de métricas de marketing.
+- Nitai Lab é a marca-mãe (https://nitailab.com.br) — reservada para o produto digital principal em desenvolvimento
+- Resgate seu Google é a frente da Nitai Lab focada em gestão de Google Business Profile para negócios locais
+- Outra frente ativa da Nitai Lab é a consultoria em operações industriais (https://industria.nitailab.com.br)
