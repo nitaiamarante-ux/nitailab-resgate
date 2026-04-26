@@ -1,0 +1,169 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Agência especializada em crescimento para clínicas de estética. Agenda cheia não vem de indicação. Vem de método." } = Astro.props;
+const fullTitle = `${title} — Nitai Lab`;
+const siteUrl = "https://resgateseugoogle.nitailab.com.br";
+const currentUrl = `${siteUrl}${Astro.url.pathname}`;
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <title>{fullTitle}</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={fullTitle} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={currentUrl} />
+  <meta property="og:site_name" content="Nitai Lab" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content={fullTitle} />
+  <meta name="twitter:description" content={description} />
+
+  <!-- Canonical -->
+  <link rel="canonical" href={currentUrl} />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400&family=Urbanist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Schema.org — MarketingAgency (LocalBusiness) -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "MarketingAgency",
+    "name": "Nitai Lab",
+    "url": siteUrl,
+    "logo": siteUrl + "/images/logo.svg",
+    "description": "Agência de marketing digital exclusiva para clínicas de estética em São Paulo. Combinamos inteligência artificial, dados e estratégia para transformar a presença digital de clínicas que querem atrair mais pacientes qualificados.",
+    "telephone": "+55-11-5286-5757",
+    "email": "comercial@nitailab.com.br",
+    "founder": {
+      "@type": "Person",
+      "name": "Nitai Amarante",
+      "jobTitle": "Fundador",
+      "description": "16 anos liderando operações em uma das maiores empresas do Brasil. 18 promoções. Especialista em crescimento para clínicas de estética."
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+55-11-5286-5757",
+      "contactType": "commercial",
+      "email": "comercial@nitailab.com.br",
+      "availableLanguage": "Portuguese"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "São Paulo",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "São Paulo",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "Brasil"
+        }
+      }
+    },
+    "sameAs": [
+      "https://www.instagram.com/nitai.trafegopago/"
+    ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Serviços Nitai Lab",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Gestão de Google Meu Negócio", "description": "Otimização completa do perfil, posts, reviews e relatórios mensais de performance para clínicas de estética."}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Tráfego Pago para Clínicas", "description": "Campanhas de Google Ads e Meta Ads focadas em pacientes qualificados para clínicas de estética."}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "SEO Local", "description": "Posicionamento orgânico nas buscas locais do Google para clínicas de estética em São Paulo."}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Criação de Conteúdo", "description": "Conteúdo estratégico para redes sociais e blog focado em atrair pacientes de estética."}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "E-mail Marketing", "description": "Campanhas de email segmentadas para nutrição e conversão de leads de clínicas."}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Marketing de Mídia Social", "description": "Gestão estratégica de Instagram e redes sociais para clínicas de estética."}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Consultoria de Estratégia", "description": "Diagnóstico completo e plano estratégico personalizado para crescimento digital de clínicas."}}
+      ]
+    },
+    "knowsAbout": [
+      "Tráfego pago para clínicas de estética",
+      "Google Meu Negócio para clínicas",
+      "SEO local para clínicas de estética",
+      "Marketing digital para clínicas de estética",
+      "Meta Ads para estética",
+      "Google Ads para clínicas",
+      "Inteligência artificial aplicada a marketing"
+    ]
+  })} />
+
+  <!-- Meta Pixel Code -->
+  <script is:inline>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1266943654987197');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1266943654987197&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <!-- Microsoft Clarity — Mapa de calor, gravação de sessão, scroll -->
+  <script is:inline>
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window,document,"clarity","script","w78jx5irys");
+  </script>
+
+  <!-- Google Analytics 4 -->
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-BMPXYBHH87"></script>
+  <script is:inline>
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());
+  gtag('config','G-BMPXYBHH87');
+  </script>
+</head>
+<body>
+  <slot />
+
+  <script>
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css';
+</style>

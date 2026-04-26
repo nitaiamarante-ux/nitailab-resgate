@@ -1,0 +1,169 @@
+---
+import Base from '../../layouts/Base.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+
+const posts = [
+  {
+    slug: 'google-meu-negocio-clinica-estetica',
+    title: 'Google Meu Negócio para clínicas de estética: o que realmente importa',
+    excerpt: 'Categorias, avaliações, postagens e o que faz sua clínica aparecer para quem busca perto.',
+    date: '2026-03-28',
+    tag: 'Google Meu Negócio',
+  },
+];
+
+const comingSoon = [
+  { title: 'Antes e depois em anúncios de estética: o que pode e o que não pode', tag: 'Compliance' },
+  { title: 'Quanto custa trazer uma paciente nova pelo Instagram?', tag: 'Anúncios' },
+  { title: 'Sazonalidade na estética: como não depender de março', tag: 'Estratégia' },
+];
+---
+
+<Base title="Blog" description="Conteúdo exclusivo sobre crescimento para clínicas de estética. Anúncios, compliance, reputação e método.">
+  <Nav />
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Blog</span>
+      <h1>Conteúdo para quem cuida<br /><span class="gold">de clínicas de estética.</span></h1>
+      <p class="page-hero__sub">
+        Só o que funciona para trazer pacientes novas
+        e manter a agenda cheia.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="blog-grid">
+        {posts.map(post => (
+          <a href={`${import.meta.env.BASE_URL.replace(/\/?$/, '/')}blog/${post.slug}`} class="post-card post-card--featured reveal">
+            <span class="post-tag">{post.tag}</span>
+            <h2>{post.title}</h2>
+            <p>{post.excerpt}</p>
+            <span class="post-date">{new Date(post.date).toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })}</span>
+          </a>
+        ))}
+
+        {comingSoon.map(post => (
+          <div class="post-card post-card--soon reveal">
+            <span class="post-tag">{post.tag}</span>
+            <h3>{post.title}</h3>
+            <span class="post-soon-badge">Em breve</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container container--sm cta-center reveal">
+      <h2>Quer receber conteúdo novo direto no WhatsApp?</h2>
+      <p>Sem spam. Um conteúdo por semana, direto ao ponto.</p>
+      <a href="https://wa.me/551152865757?text=Olá,%20quero%20receber%20os%20conteúdos%20do%20blog%20da%20Nitai%20Lab." class="btn btn--primary" target="_blank" rel="noopener">
+        Quero receber
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Base>
+
+<style>
+  .page-hero {
+    padding-top: calc(64px + var(--space-xl));
+    padding-bottom: var(--space-lg);
+  }
+
+  .page-hero__sub {
+    color: var(--mid);
+    margin-top: 1rem;
+    max-width: 480px;
+  }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .post-card {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border: 1px solid var(--bdr);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--dark);
+    transition: all 0.3s var(--ease);
+  }
+
+  a.post-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(26, 24, 20, 0.06);
+    border-color: var(--gold);
+  }
+
+  .post-card--featured {
+    grid-column: 1 / -1;
+    padding: 3rem;
+  }
+
+  .post-card--featured h2 {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .post-card--featured p {
+    color: var(--mid);
+    max-width: 600px;
+  }
+
+  .post-card--soon {
+    opacity: 0.6;
+    cursor: default;
+  }
+
+  .post-tag {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+  }
+
+  .post-card--soon h3 {
+    margin-bottom: auto;
+  }
+
+  .post-date {
+    font-size: 0.8125rem;
+    color: var(--soft);
+    margin-top: 1rem;
+  }
+
+  .post-soon-badge {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    color: var(--soft);
+    margin-top: 1rem;
+    letter-spacing: 0.06em;
+  }
+
+  .cta-center {
+    text-align: center;
+  }
+
+  .cta-center h2 { margin-bottom: 0.75rem; }
+  .cta-center p { color: var(--mid); margin: 0 auto 2rem; }
+
+  @media (max-width: 768px) {
+    .blog-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

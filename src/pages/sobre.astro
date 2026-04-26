@@ -1,0 +1,265 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base title="Sobre" description="16 anos de operação, uma escolha de nicho. Conheça quem está por trás da Nitai Lab.">
+  <Nav />
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Sobre a Nitai Lab</span>
+      <h1>Sua clínica merece alguém que<br /><span class="gold">entende o seu negócio.</span></h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container sobre-grid">
+      <div class="sobre-photo reveal">
+        <img src={`${import.meta.env.BASE_URL}img/nitai-sobre-v2.png`} alt="Nitai — fundador da Nitai Lab" loading="lazy" />
+      </div>
+      <div class="sobre-bio reveal">
+        <h2>Quem é o Nitai</h2>
+        <p>
+          16 anos liderando operações que movimentavam centenas de milhões
+          por ano, em uma das maiores empresas do Brasil. Meu trabalho era
+          transformar o que não funcionava em referência.
+        </p>
+        <p>
+          18 promoções depois, decidi construir algo meu. Com a mesma
+          disciplina, mas com liberdade para escolher onde aplicar.
+        </p>
+        <p>
+          Escolhi clínicas de estética porque reconheci um padrão:
+          profissionais excelentes, sem a estrutura comercial que o
+          trabalho delas merece. É o tipo de problema que resolvi a
+          carreira inteira.
+        </p>
+
+        <hr class="divider" />
+
+        <blockquote>
+          "O que separa resultado de sorte é método."
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="valores-header reveal">
+        <span class="eyebrow">Por que estética</span>
+        <h2>Não foi por acaso. Foi por critério.</h2>
+      </div>
+      <div class="porque-grid">
+        <div class="porque-item reveal">
+          <span class="porque-n">01</span>
+          <h3>Um mercado que merece estrutura de verdade</h3>
+          <p>Uma harmonização pode passar de R$3.000. Skincare recorrente gera receita todo mês. O valor está na mesa. Falta a estrutura comercial que conecta esse valor a pacientes novas, de forma previsível.</p>
+        </div>
+        <div class="porque-item reveal">
+          <span class="porque-n">02</span>
+          <h3>Regras próprias, conhecimento próprio</h3>
+          <p>Estética tem regulação específica: CFM, COFEN, políticas do Meta que mudam todo trimestre. Uma palavra errada bloqueia a conta. Conhecer essas regras é o mínimo para proteger sua clínica.</p>
+        </div>
+        <div class="porque-item reveal">
+          <span class="porque-n">03</span>
+          <h3>Especialidade como decisão</h3>
+          <p>Saber que "antes e depois" bloqueia conta, que "resultado garantido" viola o CFM, que março é o mês mais fraco do ano. Esse conhecimento só vem de quem escolheu fazer uma coisa só.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="valores-header reveal">
+        <span class="eyebrow">Como trabalhamos</span>
+        <h2>O que você pode esperar</h2>
+      </div>
+      <div class="valores-grid">
+        <div class="valor-card reveal">
+          <h3>Você sabe quanto custa cada paciente</h3>
+          <p>Todo mês, um número claro: quanto foi investido e quantas pacientes novas entraram.</p>
+        </div>
+        <div class="valor-card reveal">
+          <h3>Seus dados são seus</h3>
+          <p>Contatos, histórico, campanhas. Tudo fica com você, mesmo se decidir sair. A clínica é sua, as pacientes são suas.</p>
+        </div>
+        <div class="valor-card reveal">
+          <h3>Método que roda enquanto você atende</h3>
+          <p>A estrutura funciona enquanto você atende. Sem parar, sem acumular função.</p>
+        </div>
+        <div class="valor-card reveal">
+          <h3>Só clínicas de estética</h3>
+          <p>O que aprendemos com cada clínica melhora o resultado de todas as outras.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt cta-section">
+    <div class="container container--sm cta-center reveal">
+      <h2>Quer saber se faz sentido para a sua clínica?</h2>
+      <p>Uma conversa de 15 minutos. Sem compromisso, sem pitch de venda.</p>
+      <a href="https://wa.me/551152865757?text=Olá,%20gostaria%20de%20agendar%20uma%20conversa%20com%20a%20Nitai%20Lab." class="btn btn--primary" target="_blank" rel="noopener">
+        Agendar uma conversa
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Base>
+
+<style>
+  .page-hero {
+    padding-top: calc(64px + var(--space-xl));
+    padding-bottom: var(--space-lg);
+    background: var(--bg);
+  }
+
+  .page-hero h1 {
+    margin-top: 0.5rem;
+  }
+
+  .sobre-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: var(--space-lg);
+    align-items: start;
+  }
+
+  .sobre-photo img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: 8px;
+    position: sticky;
+    top: calc(64px + 2rem);
+  }
+
+  .sobre-bio h2 {
+    margin-bottom: 1.25rem;
+  }
+
+  .sobre-bio p {
+    color: var(--mid);
+    margin-bottom: 1rem;
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--gold);
+    margin: 2rem 0;
+    max-width: 80px;
+  }
+
+  .sobre-bio blockquote {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.125rem;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--mid);
+    line-height: 1.6;
+  }
+
+  .valores-header {
+    margin-bottom: var(--space-lg);
+  }
+
+  .porque-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .porque-item {
+    padding: 2.5rem 2rem;
+    border: 1px solid var(--bdr);
+    border-radius: 8px;
+    background: var(--bg);
+  }
+
+  .porque-n {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    margin-bottom: 1.25rem;
+    display: block;
+  }
+
+  .porque-item h3 {
+    margin-bottom: 0.625rem;
+  }
+
+  .porque-item p {
+    color: var(--mid);
+    font-size: 0.9375rem;
+    line-height: 1.75;
+  }
+
+  .valores-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .valor-card {
+    padding: 2rem;
+    border: 1px solid var(--bdr);
+    border-radius: 8px;
+    background: var(--bg);
+    transition: transform 0.3s var(--ease);
+  }
+
+  .valor-card:hover {
+    transform: translateY(-2px);
+  }
+
+  .valor-card h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  .valor-card p {
+    color: var(--mid);
+    font-size: 0.9375rem;
+  }
+
+  .cta-center {
+    text-align: center;
+  }
+
+  .cta-center h2 {
+    margin-bottom: 0.75rem;
+  }
+
+  .cta-center p {
+    color: var(--mid);
+    margin: 0 auto 2rem;
+  }
+
+  @media (max-width: 960px) {
+    .porque-grid {
+      grid-template-columns: 1fr;
+      max-width: 520px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .sobre-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .sobre-photo img {
+      position: static;
+      max-width: 360px;
+    }
+
+    .valores-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
