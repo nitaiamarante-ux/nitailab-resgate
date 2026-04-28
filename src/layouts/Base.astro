@@ -40,33 +40,21 @@ const currentUrl = `${siteUrl}${Astro.url.pathname}`;
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-  <!-- Schema.org — Service (Resgate seu Google) -->
+  <!-- Schema.org — MarketingAgency (LocalBusiness) -->
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Resgate seu Google",
+    "@type": "MarketingAgency",
+    "name": "Nitai Lab",
     "url": siteUrl,
-    "description": "Gestão técnica do perfil Google Business Profile para donos de negócio local. Operação remota completa, com foco em descoberta na busca local e relatório em linguagem de dono.",
-    "provider": {
-      "@type": "Organization",
-      "name": "Nitai Lab",
-      "url": "https://nitailab.com.br",
-      "founder": {
-        "@type": "Person",
-        "name": "Nitai Amarante",
-        "jobTitle": "Fundador"
-      },
-      "email": "comercial@nitailab.com.br",
-      "telephone": "+55-11-5286-5757"
-    },
-    "serviceType": "Gestão de Google Business Profile",
-    "areaServed": {
-      "@type": "Country",
-      "name": "Brasil"
-    },
-    "audience": {
-      "@type": "BusinessAudience",
-      "audienceType": "Donos de negócios locais — clínicas, oficinas, restaurantes, pet shops, academias, lojas, prestadores de serviço com público local"
+    "logo": siteUrl + "/images/logo.svg",
+    "description": "Resgate seu Google — gestão completa do Google Meu Negócio para donos de comércio e serviço local. Perfil organizado, avaliações respondidas, publicações toda semana. Garantia de 120 dias: descoberta dobra ou devolvemos.",
+    "telephone": "+55-11-5286-5757",
+    "email": "comercial@nitailab.com.br",
+    "founder": {
+      "@type": "Person",
+      "name": "Nitai Amarante",
+      "jobTitle": "Fundador",
+      "description": "16 anos liderando operações em uma das maiores empresas do Brasil. Foco em Google Meu Negócio para donos de comércio e serviço local."
     },
     "contactPoint": {
       "@type": "ContactPoint",
@@ -75,18 +63,43 @@ const currentUrl = `${siteUrl}${Astro.url.pathname}`;
       "email": "comercial@nitailab.com.br",
       "availableLanguage": "Portuguese"
     },
-    "hoursAvailable": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "09:00",
-      "closes": "18:00"
+    "areaServed": {
+      "@type": "City",
+      "name": "São Paulo",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "São Paulo",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "Brasil"
+        }
+      }
+    },
+    "sameAs": [
+      "https://www.instagram.com/nitai.trafegopago/"
+    ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Serviços Nitai Lab — Resgate seu Google",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Plano Resgate — Gestão de Google Meu Negócio", "description": "Gestão completa do perfil no Google Meu Negócio para donos de comércio e serviço local. Inclui análise inicial, descrição reescrita com palavras da cidade, categorias ajustadas, 4 publicações por mês, todas as avaliações respondidas, relatório mensal e alerta de avaliação negativa. Garantia de 120 dias."}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Análise gratuita do Google Meu Negócio", "description": "Diagnóstico de 30 pontos do perfil, com comparação com vizinhos da mesma cidade e recomendações priorizadas. Entregue por WhatsApp em até 24h."}}
+      ]
     },
     "knowsAbout": [
+      "Google Meu Negócio para comércio local",
       "Google Business Profile",
-      "Google Meu Negócio",
-      "SEO local",
-      "Descoberta na busca local",
-      "Gestão de avaliações Google"
+      "Otimização de perfil para comércio e serviço local",
+      "Resposta a avaliações no Google",
+      "Visibilidade local no Google Maps"
     ]
   })} />
 

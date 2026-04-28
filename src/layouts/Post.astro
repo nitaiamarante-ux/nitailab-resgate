@@ -14,7 +14,7 @@ interface Props {
 }
 
 const { title, description, date, updated, tag, author = "Nitai Amarante", faq = [] } = Astro.props;
-const siteUrl = "https://resgateseugoogle.nitailab.com.br";
+const siteUrl = "https://nitailab.com.br";
 const currentUrl = `${siteUrl}${Astro.url.pathname}`;
 const isoDate = new Date(date).toISOString();
 const isoUpdated = updated ? new Date(updated).toISOString() : isoDate;
