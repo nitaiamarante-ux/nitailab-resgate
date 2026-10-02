@@ -1,11 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
 import Footer from '../components/Footer.astro';
-import LpOrigemTracking from '../components/LpOrigemTracking.astro';
-import LpLeadForms from '../components/LpLeadForms.astro';
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
-const whatsappHref = 'https://wa.me/5531982976006?text=Oi%2C%20quero%20saber%20mais%20sobre%20o%20Resgate%20seu%20Google';
-const whatsappAuditoria = 'https://wa.me/5531982976006?text=Oi%2C%20quero%20o%20raio-X%20gr%C3%A1tis%20do%20meu%20Google';
+const whatsappHref = 'https://wa.me/551152865757?text=Oi%2C%20quero%20saber%20mais%20sobre%20o%20Resgate%20seu%20Google';
+const whatsappAuditoria = 'https://wa.me/551152865757?text=Oi%2C%20quero%20o%20raio-X%20gr%C3%A1tis%20do%20meu%20Google';
 ---
 
 <Base
@@ -21,39 +19,169 @@ const whatsappAuditoria = 'https://wa.me/5531982976006?text=Oi%2C%20quero%20o%20
         </svg>
         <span class="rglp-nav__name">NITAI LAB</span>
       </a>
-      <a href={whatsappHref} target="_blank" rel="noopener" class="rglp-nav__cta" data-wa-pos="nav">Falar no WhatsApp</a>
+      <a href={whatsappHref} target="_blank" rel="noopener" class="rglp-nav__cta">Falar no WhatsApp</a>
     </div>
   </nav>
 
   <!-- HERO -->
   <section class="rg-hero">
-    <!-- Grid de mapa sutil no fundo -->
+    <!-- Grade sutil de mapa no fundo (textura) -->
     <div class="rg-hero__mapgrid" aria-hidden="true"></div>
 
     <div class="rg-hero__layout">
+      <!-- ESQUERDA: texto + CTA -->
       <div class="rg-hero__inner">
         <p class="eyebrow">Pra quem atende aqui na cidade</p>
-        <div class="rg-hero__pinblock">
-          <svg class="rg-hero__pin" viewBox="0 0 56 82" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M28 2C14.2 2 3 13.2 3 27c0 19.8 25 50 25 50s25-30.2 25-50C53 13.2 41.8 2 28 2z" fill="var(--maps-red)" opacity="0.95"/>
-            <circle cx="28" cy="27" r="9" fill="#fff"/>
-            <text x="28" y="32" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif" font-size="11" font-weight="700" fill="var(--maps-red)">1º</text>
-            <!-- mapa -->
-            <rect x="8" y="64" width="40" height="2.5" rx="1.25" fill="var(--maps-red)" opacity="0.22"/>
-            <rect x="14" y="69" width="28" height="2" rx="1" fill="var(--maps-red)" opacity="0.14"/>
-            <rect x="20" y="73" width="16" height="1.5" rx="0.75" fill="var(--maps-red)" opacity="0.08"/>
-          </svg>
-        </div>
         <h1 class="rg-hero__h1">
-          Seu Google<br />tá largado.<br />
-          <em>A gente arruma.</em>
+          Em 120 dias, dobro a quantidade de gente que busca o que você vende e te acha no Google.<br />
+          <em>Ou devolvo tudo.</em>
         </h1>
-        <p class="rg-hero__sub">Seu perfil no Google Maps fica parado, desatualizado, com foto antiga. Enquanto isso, quem tá procurando o que você vende encontra o concorrente primeiro. A gente resolve isso com método, sem você mexer em nada.</p>
-        <a href={whatsappHref} target="_blank" rel="noopener" class="btn btn--primary rg-hero__cta" data-wa-pos="hero">Falar no WhatsApp</a>
-        <a href="#auditoria" class="rg-hero__link">Quero o raio-X grátis do meu Google →</a>
+        <p class="rg-hero__sub">Você cuida do seu negócio. Eu cuido do seu Google.</p>
+        <a href="#auditoria" class="btn btn--primary rg-hero__cta">Quero a análise gratuita do meu Google</a>
+        <p class="rg-hero__cta-helper">Em 2 minutos te mando seu raio-X pelo WhatsApp. Sem compromisso.</p>
+        <a href={whatsappHref} target="_blank" rel="noopener" class="rg-hero__cta-alt">ou fala direto comigo no WhatsApp →</a>
       </div>
 
-      <div class="rg-hero__mock">
+      <!-- DIREITA: mockup celular Google Maps -->
+      <div class="rg-hero__phone" aria-hidden="true">
+        <svg class="rg-hero__phone-svg" viewBox="0 0 360 720" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+          <!-- Frame celular -->
+          <rect x="6" y="6" width="348" height="708" rx="42" fill="#111"/>
+          <rect x="14" y="14" width="332" height="692" rx="36" fill="#fff"/>
+
+          <!-- Notch -->
+          <rect x="148" y="18" width="64" height="22" rx="11" fill="#111"/>
+
+          <!-- Status bar minimal -->
+          <text x="32" y="58" font-family="Arial, sans-serif" font-size="11" font-weight="600" fill="#202124">9:41</text>
+
+          <!-- Search bar Google Maps -->
+          <g transform="translate(28, 64)">
+            <rect width="304" height="44" rx="22" fill="#f1f3f4"/>
+            <circle cx="22" cy="22" r="7" fill="none" stroke="#5f6368" stroke-width="2"/>
+            <line x1="27" y1="27" x2="33" y2="33" stroke="#5f6368" stroke-width="2" stroke-linecap="round"/>
+            <text x="44" y="27" font-family="Arial, sans-serif" font-size="13" fill="#5f6368">[seu serviço] na sua cidade</text>
+            <!-- Google G icon (simplificado) -->
+            <circle cx="280" cy="22" r="10" fill="#fff" stroke="#dadce0" stroke-width="1"/>
+            <text x="280" y="27" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#4285F4">G</text>
+          </g>
+
+          <!-- Map area -->
+          <g transform="translate(14, 124)">
+            <rect width="332" height="380" fill="#e8eaed"/>
+
+            <!-- Áreas verdes (parques) -->
+            <rect x="20" y="20" width="80" height="60" rx="6" fill="#c8e6c9"/>
+            <rect x="200" y="240" width="100" height="80" rx="8" fill="#c8e6c9"/>
+
+            <!-- Avenidas (brancas grossas) -->
+            <path d="M 0 100 L 332 110" stroke="#fff" stroke-width="14"/>
+            <path d="M 0 220 L 332 210" stroke="#fff" stroke-width="14"/>
+            <path d="M 0 320 L 332 330" stroke="#fff" stroke-width="10"/>
+            <path d="M 100 0 L 90 380" stroke="#fff" stroke-width="14"/>
+            <path d="M 230 0 L 240 380" stroke="#fff" stroke-width="14"/>
+
+            <!-- Quadras de edifícios -->
+            <rect x="120" y="130" width="50" height="60" rx="2" fill="#dadce0"/>
+            <rect x="180" y="135" width="40" height="50" rx="2" fill="#dadce0"/>
+            <rect x="120" y="240" width="60" height="50" rx="2" fill="#dadce0"/>
+            <rect x="20" y="240" width="60" height="60" rx="2" fill="#dadce0"/>
+
+            <!-- Pin DESTACADO (Sua Loja, centro, com 1º) -->
+            <g transform="translate(170, 200)">
+              <ellipse cx="0" cy="3" rx="14" ry="3" fill="rgba(0,0,0,0.18)"/>
+              <path d="M 0 -2 C -22 -28 -22 -50 0 -68 C 22 -50 22 -28 0 -2 Z" fill="#EA4335"/>
+              <circle cx="0" cy="-44" r="11" fill="#fff"/>
+              <text x="0" y="-40" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#EA4335">1º</text>
+            </g>
+
+            <!-- Pins concorrentes (menores, opacidade reduzida) -->
+            <g transform="translate(60, 160)" opacity="0.5">
+              <path d="M 0 -1 C -10 -15 -10 -25 0 -34 C 10 -25 10 -15 0 -1 Z" fill="#EA4335"/>
+              <circle cx="0" cy="-22" r="5" fill="#fff"/>
+            </g>
+            <g transform="translate(280, 280)" opacity="0.5">
+              <path d="M 0 -1 C -10 -15 -10 -25 0 -34 C 10 -25 10 -15 0 -1 Z" fill="#EA4335"/>
+              <circle cx="0" cy="-22" r="5" fill="#fff"/>
+            </g>
+            <g transform="translate(290, 90)" opacity="0.4">
+              <path d="M 0 -1 C -8 -12 -8 -20 0 -27 C 8 -20 8 -12 0 -1 Z" fill="#EA4335"/>
+              <circle cx="0" cy="-17" r="4" fill="#fff"/>
+            </g>
+          </g>
+
+          <!-- Card da loja (informações inferiores) -->
+          <g transform="translate(28, 524)">
+            <rect width="304" height="160" rx="14" fill="#fff" stroke="#dadce0" stroke-width="1"/>
+            <text x="20" y="32" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#202124">Sua Loja</text>
+            <text x="20" y="56" font-family="Arial, sans-serif" font-size="13" fill="#fbbc04" letter-spacing="1">★★★★★</text>
+            <text x="80" y="56" font-family="Arial, sans-serif" font-size="12" fill="#5f6368">4,9 (87)</text>
+            <circle cx="24" cy="80" r="3" fill="#34a853"/>
+            <text x="32" y="84" font-family="Arial, sans-serif" font-size="11" fill="#5f6368">Aberto · Atende agora</text>
+
+            <!-- 3 botões Google Maps style -->
+            <g transform="translate(20, 100)">
+              <rect width="78" height="36" rx="18" fill="#fff" stroke="#1a73e8" stroke-width="1.5"/>
+              <text x="39" y="23" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#1a73e8">Ligar</text>
+            </g>
+            <g transform="translate(106, 100)">
+              <rect width="78" height="36" rx="18" fill="#1a73e8"/>
+              <text x="39" y="23" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#fff">Rota</text>
+            </g>
+            <g transform="translate(192, 100)">
+              <rect width="92" height="36" rx="18" fill="#fff" stroke="#dadce0" stroke-width="1"/>
+              <text x="46" y="23" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#5f6368">Site</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM vs GOOGLE -->
+  <section class="rg-instavsgoogle section section--alt" id="instagram-vs-google">
+    <div class="container container--sm">
+      <span class="eyebrow reveal">A diferença que muda tudo</span>
+      <h2 class="rg-instavsgoogle__h2 reveal">
+        Instagram leva tempo.<br />
+        <em>Google leva o cliente.</em>
+      </h2>
+      <div class="rg-instavsgoogle__body reveal">
+        <p>No Instagram, alguém te descobriu rolando feed. Pode comprar daqui a seis meses. Pode nunca.</p>
+        <p>No Google, alguém digitou agora <strong>o que você vende</strong>, na sua cidade, e tá decidindo entre os três primeiros que aparecer. <em>Se você não tá nos três, foi pro vizinho.</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF BAR -->
+  <section class="rg-proof">
+    <div class="rg-proof__inner">
+      <div class="rg-proof__item">
+        <svg class="rg-proof__icon" width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="var(--maps-red)" opacity="0.9"/><circle cx="12" cy="9" r="2.5" fill="#fff"/></svg>
+        <span class="rg-proof__num">81° <span class="rg-proof__arrow">→</span> 28°</span>
+        <span class="rg-proof__label">1ª cliente, sem anúncio pago — efeito do método</span>
+      </div>
+      <div class="rg-proof__sep"></div>
+      <div class="rg-proof__item">
+        <svg class="rg-proof__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--maps-red)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l2.5 2.5L16 9"/></svg>
+        <span class="rg-proof__num">Zero</span>
+        <span class="rg-proof__label">amarras. Sem contrato, multa ou letra miúda.</span>
+      </div>
+      <div class="rg-proof__sep"></div>
+      <div class="rg-proof__item">
+        <svg class="rg-proof__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--maps-red)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+        <span class="rg-proof__num">120 dias</span>
+        <span class="rg-proof__label">descoberta dobra ou devolvo tudo</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEMA -->
+  <section class="rg-problema">
+    <div class="rg-problema__inner reveal">
+      <span class="rg-problema__a">Você atende bem demais.<br />O pessoal que chega aqui sabe.</span>
+
+      <div class="rg-problema__mock">
         <div class="rg-mock__card">
           <div class="rg-mock__header">
             <div class="rg-mock__searchbar">
@@ -67,7 +195,7 @@ const whatsappAuditoria = 'https://wa.me/5531982976006?text=Oi%2C%20quero%20o%20
               <div class="rg-mock__info">
                 <span class="rg-mock__name">Auto Center do João</span>
                 <span class="rg-mock__stars">★★★★★ <span class="rg-mock__count">(127)</span></span>
-                <span class="rg-mock__detail">Aberto · Perfil completo</span>
+                <span class="rg-mock__detail">Aberto · <strong>218 descobriram este mês</strong></span>
               </div>
             </div>
             <div class="rg-mock__item rg-mock__item--competitor">
@@ -75,12 +203,12 @@ const whatsappAuditoria = 'https://wa.me/5531982976006?text=Oi%2C%20quero%20o%20
               <div class="rg-mock__info">
                 <span class="rg-mock__name">Oficina Central</span>
                 <span class="rg-mock__stars">★★★★☆ <span class="rg-mock__count">(89)</span></span>
-                <span class="rg-mock__detail">Aberto · 12 serviços</span>
+                <span class="rg-mock__detail">Aberto · <strong>142 descobriram este mês</strong></span>
               </div>
             </div>
             <div class="rg-mock__skip">
               <span>·</span><span>·</span><span>·</span>
-              <span class="rg-mock__skip-txt">+156 negócios na frente</span>
+              <span class="rg-mock__skip-txt">+156 negócios pegando suas descobertas</span>
               <span>·</span><span>·</span><span>·</span>
             </div>
             <div class="rg-mock__item rg-mock__item--you">
@@ -88,59 +216,24 @@ const whatsappAuditoria = 'https://wa.me/5531982976006?text=Oi%2C%20quero%20o%20
               <div class="rg-mock__info">
                 <span class="rg-mock__name rg-mock__name--you">Seu negócio</span>
                 <span class="rg-mock__stars">★★<span class="rg-mock__star--empty">★</span><span class="rg-mock__star--empty">★</span><span class="rg-mock__star--empty">★</span> <span class="rg-mock__count">(3 sem resposta)</span></span>
-                <span class="rg-mock__detail rg-mock__detail--warn">Sem descrição · Sem posts · Ignorado</span>
+                <span class="rg-mock__detail rg-mock__detail--warn">Sem descrição · Sem posts · <strong>8 descobriram este mês</strong></span>
               </div>
             </div>
           </div>
-          <p class="rg-mock__caption">Isso é o que o freguês vê quando procura o que você vende.</p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- SOCIAL PROOF BAR -->
-  <section class="rg-proof">
-    <div class="rg-proof__inner">
-      <div class="rg-proof__item">
-        <svg class="rg-proof__icon" width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="var(--maps-red)" opacity="0.9"/><circle cx="12" cy="9" r="2.5" fill="#fff"/></svg>
-        <span class="rg-proof__num">5</span>
-        <span class="rg-proof__label">perfis gerenciados no Google</span>
-      </div>
-      <div class="rg-proof__sep"></div>
-      <div class="rg-proof__item">
-        <svg class="rg-proof__icon" width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="var(--maps-yellow)" opacity="0.95"/></svg>
-        <span class="rg-proof__num">92<span class="rg-proof__of">/100</span></span>
-        <span class="rg-proof__label">maior score GBP entregue</span>
-      </div>
-      <div class="rg-proof__sep"></div>
-      <div class="rg-proof__item">
-        <svg class="rg-proof__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--maps-red)" stroke-width="1.8" stroke-linecap="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
-        <span class="rg-proof__num">120</span>
-        <span class="rg-proof__label">dias de garantia de resultado</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROBLEMA -->
-  <section class="rg-problema">
-    <div class="rg-problema__inner reveal">
-      <span class="rg-problema__a">Você atende bem demais.<br />O pessoal que chega aqui sabe.</span>
-      <div class="rg-problema__search">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--maps-red)" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-        <span>[seu serviço] na [sua cidade]</span>
-        <span class="rg-problema__cursor"></span>
-      </div>
       <span class="rg-problema__b">
-        Mas quem tá procurando agora, no celular,<br />
-        ainda não te conhece.<br />
-        <em>E o Google não ajuda ninguém a te achar.</em>
+        São <strong>218 pessoas por mês</strong> descobrindo o vizinho.<br />
+        E <strong>8 descobrindo você</strong>.<br />
+        <em>Não é mistério. É o Google fazendo o trabalho dele.</em>
       </span>
     </div>
   </section>
 
   <!-- CTA INTERMEDIÁRIO 1 -->
   <div class="rg-cta-mid">
-    <a href={whatsappHref} target="_blank" rel="noopener" class="btn btn--gold rg-cta-mid__btn" data-wa-pos="cta-mid-1">Falar no WhatsApp</a>
+    <a href="#auditoria" class="btn btn--gold rg-cta-mid__btn">Quero ver onde meu Google tá hoje</a>
   </div>
 
   <!-- NEGLIGÊNCIA -->
@@ -197,73 +290,114 @@ const whatsappAuditoria = 'https://wa.me/5531982976006?text=Oi%2C%20quero%20o%20
     </div>
   </section>
 
-  <!-- O QUE FAZEMOS -->
-  <section class="rg-entrega section section--alt">
+  <!-- O QUE FAZEMOS — Plano Resgate (3 horizontes + bônus + compromisso) -->
+  <section class="rg-entrega section section--alt" id="plano-resgate">
     <div class="container container--sm">
-      <span class="eyebrow reveal"><svg class="rg-eyebrow__pin" viewBox="0 0 24 34" fill="none"><path d="M12 0C5.4 0 0 5.4 0 12c0 9 12 22 12 22s12-13 12-22C24 5.4 18.6 0 12 0z" fill="var(--gold)" opacity="0.7"/><circle cx="12" cy="12" r="3.5" fill="var(--dark)" opacity="0.4"/></svg> O que entra no seu mês</span>
-      <h2 class="rg-entrega__h2 reveal">Tudo que seu perfil precisa.<br />Nada que você precise fazer.</h2>
+      <span class="eyebrow reveal"><svg class="rg-eyebrow__pin" viewBox="0 0 24 34" fill="none"><path d="M12 0C5.4 0 0 5.4 0 12c0 9 12 22 12 22s12-13 12-22C24 5.4 18.6 0 12 0z" fill="var(--gold)" opacity="0.7"/><circle cx="12" cy="12" r="3.5" fill="var(--dark)" opacity="0.4"/></svg> O Plano Resgate</span>
+      <h2 class="rg-entrega__h2 reveal">Em 7, 60 e 120 dias.<br />O que muda no seu Google.</h2>
 
-      <div class="rg-entrega__setup reveal">
-        <h3>Setup inicial <span class="rg-entrega__tag">Mês 1</span></h3>
+      <!-- Horizonte 1: setup -->
+      <div class="rg-entrega__horizon reveal">
+        <h3>Em 7 dias <span class="rg-entrega__tag">Setup completo</span></h3>
         <ul>
-          <li>Auditoria de 30 pontos — a gente acha tudo que tá errado (e sempre tem)</li>
-          <li>Descrição reescrita com as palavras que o pessoal da cidade realmente pesquisa</li>
-          <li>Categorias, serviços e atributos ajustados pro algoritmo te encontrar</li>
-          <li>Fotos organizadas — capa, logo, galeria. Tudo no lugar certo</li>
-          <li>Endereço, horário, telefone, WhatsApp — tudo conferido e atualizado</li>
+          <li>A gente abre seu Google de cima a baixo. Acha tudo que tá errado (e sempre tem).</li>
+          <li>Sua descrição reescrita com as palavras que o pessoal da sua cidade realmente pesquisa.</li>
+          <li>Categorias, serviços, atributos — tudo no lugar pra você ser encontrado.</li>
+          <li>Galeria organizada — capa, logo, ambiente, produtos. Cada foto com nome certo.</li>
+          <li>Endereço, horário, telefone, WhatsApp — tudo conferido e no ar.</li>
+          <li>Perguntas frequentes plantadas — pra ninguém perguntar duas vezes.</li>
         </ul>
       </div>
 
-      <div class="rg-entrega__recorrente reveal">
-        <h3>Todo mês <span class="rg-entrega__tag">Recorrente</span></h3>
+      <!-- Horizonte 2: movimento começando -->
+      <div class="rg-entrega__horizon reveal">
+        <h3>Em 60 dias <span class="rg-entrega__tag">Movimento começando</span></h3>
         <ul>
-          <li><strong>4 publicações no Google</strong> — com chamada pra ação, não post genérico</li>
-          <li><strong>Toda avaliação respondida</strong> — cada uma personalizada, no tom do seu negócio</li>
-          <li><strong>Relatório que você entende</strong> — quantas pessoas te viram, clicaram, ligaram, pediram rota. Sem jargão</li>
-          <li><strong>Caça de palavras da sua cidade</strong> — a gente encontra as buscas onde você quase aparece e empurra pra cima</li>
-          <li><strong>Alerta de avaliação negativa</strong> — resposta antes que o próximo freguês leia</li>
+          <li><strong>4 publicações por mês</strong> no seu Google — com chamada pra ação. Não post genérico.</li>
+          <li><strong>Toda avaliação respondida</strong> — uma por uma, no tom do seu negócio.</li>
+          <li><strong>Caça mensal de buscas</strong> — descobrimos onde você quase aparece e empurramos pra frente.</li>
+          <li><strong>Alerta de avaliação negativa</strong> — você sabe antes do próximo freguês ler.</li>
+          <li><strong>Relatório por WhatsApp</strong> — quantas pessoas te descobriram, pediram rota, ligaram. Sem jargão.</li>
         </ul>
       </div>
+
+      <!-- Horizonte 3: garantia se mede -->
+      <div class="rg-entrega__horizon rg-entrega__horizon--gold reveal">
+        <h3>Em 120 dias <span class="rg-entrega__tag rg-entrega__tag--gold">A garantia se mede</span></h3>
+        <ul>
+          <li><strong>A descoberta do seu Google dobrou.</strong> Quantidade de gente nova te encontrando, comparada com hoje.</li>
+          <li>Se não dobrou, <strong>devolvo tudo</strong> — setup e mensalidades. Sem letra miúda. Sem formulário.</li>
+          <li>Você confere no painel do Google. Mesmo número que a gente vê todo mês.</li>
+        </ul>
+      </div>
+
+      <!-- BÔNUS -->
+      <div class="rg-entrega__bonus reveal">
+        <h3 class="rg-entrega__bonus-title">Vai junto, no setup</h3>
+        <div class="rg-entrega__bonus-grid">
+          <div class="rg-entrega__bonus-card">
+            <span class="rg-entrega__bonus-tag">Bônus 1</span>
+            <h4>Raio-X dos 5 vizinhos</h4>
+            <p>A gente olha os 5 concorrentes diretos no Maps. Quem tá te comendo. Em quais buscas. Onde tem brecha pra você entrar primeiro.</p>
+          </div>
+          <div class="rg-entrega__bonus-card">
+            <span class="rg-entrega__bonus-tag">Bônus 2</span>
+            <h4>Arte do balcão</h4>
+            <p>PDF imprimível "Tá gostando? Avalia no Google" com QR code direto pro seu perfil. Cola no caixa, freguês escaneia, avaliação chega.</p>
+          </div>
+          <div class="rg-entrega__bonus-card">
+            <span class="rg-entrega__bonus-tag">Bônus 3</span>
+            <h4>Aula — pedir avaliação sem ser chato</h4>
+            <p>Vídeo curto pra você ou seu atendente. Como pedir avaliação no momento certo, sem forçar, sem constranger ninguém.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Compromisso honesto: por que 6 meses -->
+      <p class="rg-entrega__compromisso reveal">
+        <strong>Por que peço 6 meses contigo?</strong> Google leva tempo pra confiar num perfil novo. Eu também. Se eu prometesse resultado em 30 dias, tava te enganando — ninguém faz isso de verdade nesse prazo. Por isso os 120 dias de garantia. <em>Antes disso, ninguém promete nada honesto.</em>
+      </p>
     </div>
   </section>
 
   <!-- CASE POLI BRITO -->
   <section class="rg-case section">
     <div class="container container--sm">
-      <span class="eyebrow reveal">Primeiro resgate</span>
-      <h2 class="rg-case__h2 reveal">Largado no Google.<br />92/100 em 60 dias.</h2>
+      <span class="eyebrow reveal">Primeiro resgate — prova de método</span>
+      <h2 class="rg-case__h2 reveal">A 1ª cliente.<br />O método nasceu com ela.</h2>
 
       <div class="rg-case__body reveal">
         <div class="rg-case__stats">
           <div class="rg-case__stat">
-            <span class="rg-case__num">3</span>
-            <span class="rg-case__label">Serviços antes</span>
+            <span class="rg-case__num">81<sup>o</sup></span>
+            <span class="rg-case__label">Lugar no Google antes</span>
           </div>
           <div class="rg-case__arrow">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--maps-red)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </div>
           <div class="rg-case__stat">
-            <span class="rg-case__num rg-case__num--gold">14</span>
-            <span class="rg-case__label">Serviços depois</span>
+            <span class="rg-case__num rg-case__num--gold">28<sup>o</sup></span>
+            <span class="rg-case__label">Lugar no Google depois</span>
           </div>
           <div class="rg-case__stat rg-case__stat--score">
-            <span class="rg-case__num rg-case__num--gold">92<span class="rg-case__of">/100</span></span>
-            <span class="rg-case__label">Score do perfil</span>
+            <span class="rg-case__num rg-case__num--gold">0</span>
+            <span class="rg-case__label">Anúncio pago. Tudo orgânico.</span>
           </div>
         </div>
 
         <div class="rg-case__detail">
-          <p><strong>Dra. Poli Brito</strong> — Estética Facial, Belo Horizonte. <em>Primeira cliente. Abriu o caminho.</em></p>
+          <p><strong>Dra. Poli Brito</strong> — Estética Facial, Belo Horizonte. <em>Primeira cliente. Confiou primeiro, abriu o caminho do método.</em></p>
           <p>Perfil sem descrição. Serviços não cadastrados. Avaliações ignoradas. O tipo de Google que todo dono de negócio tem e finge que não.</p>
-          <p>Em 60 dias, sem anúncio e sem site:</p>
+          <p>Em 60 dias, sem anúncio pago e sem site novo:</p>
           <ul>
             <li>Descrição reescrita com as palavras que o cliente realmente pesquisa</li>
             <li>Serviços cadastrados um a um, com palavras da cidade</li>
             <li>48 avaliações — todas respondidas, uma por uma</li>
-            <li>Posts semanais ativos no perfil</li>
-            <li>Nota do perfil no nosso diagnóstico: de largado a 92 de 100</li>
+            <li>Postagens semanais ativas no perfil</li>
+            <li>Saiu da posição 81 pra 28 na principal busca da especialidade dela</li>
           </ul>
-          <p class="rg-case__note">O mesmo método serve ótica, oficina, pet shop, padaria, restaurante, loja de materiais, academia — qualquer negócio local que depende de quem procura na cidade.</p>
+          <p class="rg-case__note"><strong>Não é a Poli que importa aqui — é o método.</strong> O mesmo caminho serve oficina, padaria, ótica, pet shop, restaurante, loja de materiais, academia. Muda o que entra na descrição. O resto é igual.</p>
+          <p class="rg-case__disclaimer"><em>O salto de posição da Poli é um efeito visível do método — não é o que eu prometo a você. <strong>A garantia oficial é outra:</strong> dobrar a quantidade de gente nova te encontrando no Google em 120 dias. Subir no Google é consequência. Descoberta é o compromisso.</em></p>
         </div>
       </div>
 
@@ -292,11 +426,11 @@ const whatsappAuditoria = 'https://wa.me/5531982976006?text=Oi%2C%20quero%20o%20
 
   <!-- CTA INTERMEDIÁRIO 2 -->
   <div class="rg-cta-mid">
-    <a href={whatsappHref} target="_blank" rel="noopener" class="btn btn--gold rg-cta-mid__btn" data-wa-pos="cta-mid-2">Falar no WhatsApp agora</a>
+    <a href="#auditoria" class="btn btn--gold rg-cta-mid__btn">Quero a análise gratuita do meu Google</a>
   </div>
 
   <!-- COMO FUNCIONA -->
-  <section class="rg-como section section--alt">
+  <section class="rg-como section section--alt" id="como-funciona">
     <div class="container container--sm">
       <span class="eyebrow reveal">Como funciona</span>
       <h2 class="rg-como__h2 reveal">Sem enrolação.<br />Sem jargão. Sem você ter que mexer.</h2>
@@ -347,16 +481,27 @@ const whatsappAuditoria = 'https://wa.me/5531982976006?text=Oi%2C%20quero%20o%20
         </details>
         <details class="rg-faq__item reveal">
           <summary>Tem contrato? Multa?</summary>
-          <p>Sem contrato longo e sem multa. E tem garantia de continuidade: se a meta de descoberta combinada não vier, e você tiver feito a sua parte, a gente segue trabalhando sem cobrar até vir. Tudo escrito na proposta.</p>
+          <p>Sem contrato longo, sem multa, sem letra miúda. Se em 120 dias a quantidade de gente nova te encontrando no Google não dobrar, eu devolvo tudo — setup e mensalidades. Você confere o número direto no painel do Google.</p>
         </details>
         <details class="rg-faq__item reveal">
           <summary>Quando começa a aparecer?</summary>
-          <p>Na primeira semana o seu perfil já fica completo e arrumado. Mais gente começa a te achar aos poucos (depende da concorrência da sua cidade e do seu bairro), e os primeiros sinais aparecem em 30 dias.</p>
+          <p>Na primeira semana seu Google já tá organizado. O movimento começa a aparecer aos poucos — depende da concorrência da sua cidade. Os primeiros sinais (mais gente vendo seu perfil) chegam em 30-45 dias. O salto firme — quando a descoberta dobra — é o que a gente busca em 120 dias. Por isso a garantia é desse tamanho, e não de 30 dias: mais curto que isso, ninguém promete nada honesto.</p>
         </details>
         <details class="rg-faq__item reveal">
           <summary>O que tá incluso?</summary>
-          <p><strong>Incluso:</strong> auditoria de 30 pontos, descrição reescrita com palavras que o pessoal da cidade pesquisa, categorias e serviços ajustados, fotos organizadas, 4 publicações por mês, todas as avaliações respondidas, relatório mensal em linguagem humana, caça de palavras-chave locais e alerta de avaliação negativa.</p>
-          <p><strong>Não incluso:</strong> a gente cuida <em>só</em> do Google. Não mexe em Instagram, não cria site, não faz anúncio pago, não produz foto ou vídeo. Fazemos uma coisa e fazemos bem.</p>
+          <p><strong>Tá dentro:</strong></p>
+          <ul>
+            <li>Análise de 30 pontos do seu Google</li>
+            <li>Descrição reescrita com as palavras que o pessoal da cidade pesquisa</li>
+            <li>Categorias e serviços ajustados</li>
+            <li>Fotos organizadas</li>
+            <li>4 publicações por mês</li>
+            <li>Todas as avaliações respondidas</li>
+            <li>Relatório mensal em linguagem humana</li>
+            <li>Caça de palavras-chave locais</li>
+            <li>Alerta de avaliação negativa</li>
+          </ul>
+          <p><strong>Não tá dentro:</strong> a gente cuida <em>só</em> do Google. Não mexe em Instagram, não cria site, não faz anúncio pago, não produz foto ou vídeo. Fazemos uma coisa e fazemos bem.</p>
         </details>
         <details class="rg-faq__item reveal">
           <summary>Quem responde as avaliações?</summary>
@@ -367,8 +512,8 @@ const whatsappAuditoria = 'https://wa.me/5531982976006?text=Oi%2C%20quero%20o%20
           <p>A gente responde antes que o próximo freguês leia. Com tom profissional, sem briga, sem desculpa genérica. Avaliação negativa bem respondida vende mais que cinco estrelas sem resposta.</p>
         </details>
         <details class="rg-faq__item reveal">
-          <summary>Anúncio no Google tá incluso?</summary>
-          <p>Não. Aqui é o orgânico — aparecer sem pagar por clique, porque seu perfil tá bem feito. Se quiser anúncio, a gente orienta separado, mas muito negócio resolve só com o perfil certinho.</p>
+          <summary>Anúncio pago tá incluso?</summary>
+          <p>Não. Aqui é o jeito orgânico — você aparece porque seu Google tá bem feito, não porque tá pagando pra cada pessoa que vê. Se um dia quiser também rodar anúncio, a gente orienta separado, mas muito negócio resolve só com o perfil certinho.</p>
         </details>
         <details class="rg-faq__item reveal">
           <summary>Vocês são daqui?</summary>
@@ -380,17 +525,17 @@ const whatsappAuditoria = 'https://wa.me/5531982976006?text=Oi%2C%20quero%20o%20
 
   <!-- CTA INTERMEDIÁRIO 3 -->
   <div class="rg-cta-mid">
-    <a href={whatsappHref} target="_blank" rel="noopener" class="btn btn--gold rg-cta-mid__btn" data-wa-pos="cta-mid-3">Quero ser achado no Google</a>
-    <span class="rg-cta-mid__badge">Garantia de continuidade</span>
+    <a href="#auditoria" class="btn btn--gold rg-cta-mid__btn">Quero ser achado no Google</a>
+    <span class="rg-cta-mid__badge">120 dias: descoberta dobra ou devolvo</span>
   </div>
 
   <!-- AUDITORIA / RAIO-X GRÁTIS -->
   <section class="rg-auditoria section" id="auditoria">
     <div class="container container--sm">
       <div class="rg-auditoria__box reveal">
-        <span class="eyebrow">Raio-X grátis</span>
-        <h2 class="rg-auditoria__h2">Quer saber como seu Google tá hoje?</h2>
-        <p class="rg-auditoria__sub">A gente analisa seu perfil em 30 pontos e te manda o diagnóstico no WhatsApp em até 24h. Sem compromisso, sem pegadinha, sem call.</p>
+        <span class="eyebrow">Análise gratuita do seu Google</span>
+        <h2 class="rg-auditoria__h2">Vamos olhar seu Google agora.</h2>
+        <p class="rg-auditoria__sub">Eu rodo uma análise de 30 pontos no seu perfil — onde você aparece, onde o vizinho tá te comendo, e o que dá pra arrumar primeiro. Te mando tudo no WhatsApp em até 24h. Sem compromisso, sem pegadinha, sem call de uma hora.</p>
         <form class="rg-diagnostico__form" id="diagForm">
           <input type="text" name="nome" placeholder="Seu nome" required class="rg-diagnostico__input" />
           <input type="text" name="negocio" placeholder="Nome do seu negócio" required class="rg-diagnostico__input" />
@@ -400,10 +545,9 @@ const whatsappAuditoria = 'https://wa.me/5531982976006?text=Oi%2C%20quero%20o%20
         </form>
         <div class="rg-diagnostico__ok" id="diagOk" style="display:none;">
           <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--maps-red)" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-          <p id="diagOkMsg">Abrindo seu WhatsApp… é só apertar enviar.</p>
-          <a href="#" id="diagOkWaBtn" class="btn btn--gold rg-diagnostico__wabtn" data-wa-pos="diagform-ok" data-wa-no-rewrite="1" style="display:none;margin-top:12px;">Abrir WhatsApp</a>
+          <p>Recebido. A gente analisa seu perfil e te chama no WhatsApp em até 24h.</p>
         </div>
-        <p class="rg-auditoria__alt">Prefere falar direto? <a href={whatsappAuditoria} target="_blank" rel="noopener" data-wa-pos="auditoria-alt">Chama a gente no WhatsApp →</a></p>
+        <p class="rg-auditoria__alt">Prefere falar direto? <a href={whatsappAuditoria} target="_blank" rel="noopener">Chama a gente no WhatsApp →</a></p>
       </div>
     </div>
   </section>
@@ -412,9 +556,9 @@ const whatsappAuditoria = 'https://wa.me/5531982976006?text=Oi%2C%20quero%20o%20
   <section class="rg-garantia section section--alt">
     <div class="container container--sm">
       <div class="rg-garantia__box reveal">
-        <span class="rg-garantia__badge">Garantia</span>
-        <h3>Não veio, a gente continua.</h3>
-        <p>No começo a gente combina uma meta de descoberta pro seu perfil: gente nova vendo, clicando pra ligar, pedindo rota. Se no fim do contrato ela não tiver vindo, e você tiver feito a sua parte, a gente segue trabalhando sem cobrar nada a mais até vir. Tudo escrito na proposta, sem letra miúda.</p>
+        <span class="rg-garantia__badge">120 dias</span>
+        <h3>Descoberta dobra ou devolvo tudo.</h3>
+        <p>A meta é uma só: <strong>dobrar a quantidade de gente nova que descobre seu negócio no Google.</strong> Comparado com o mês que a gente entrou. Se não dobrar em 120 dias, eu devolvo tudo — setup e mensalidades. Você confere o número direto no painel do Google. Sem formulário, sem letra miúda. Você manda mensagem, eu devolvo.</p>
       </div>
     </div>
   </section>
@@ -424,7 +568,7 @@ const whatsappAuditoria = 'https://wa.me/5531982976006?text=Oi%2C%20quero%20o%20
     <div class="container container--sm">
       <div class="rg-urgencia__inner reveal">
         <h2 class="rg-urgencia__h2">Enquanto você lê isso,<br />alguém procurou o que<br />você vende no Google.<br /><em>E não te encontrou.</em></h2>
-        <a href={whatsappHref} target="_blank" rel="noopener" class="btn btn--dark rg-urgencia__cta" data-wa-pos="urgencia">Resolver isso agora</a>
+        <a href="#auditoria" class="btn btn--dark rg-urgencia__cta">Quero a análise gratuita agora</a>
         <p class="rg-urgencia__vagas">A gente atende no máximo 15 negócios por mês — cada perfil recebe atenção individual.</p>
       </div>
     </div>
@@ -464,7 +608,6 @@ const whatsappAuditoria = 'https://wa.me/5531982976006?text=Oi%2C%20quero%20o%20
         <input type="text" name="negocio" placeholder="Nome do seu negócio" required class="rg-popup__input" />
         <input type="text" name="cidade" placeholder="Cidade" required class="rg-popup__input" />
         <input type="tel" name="whatsapp" placeholder="WhatsApp com DDD" required class="rg-popup__input" />
-        <input type="email" name="email" placeholder="E-mail (opcional)" class="rg-popup__input" />
         <button type="submit" class="btn btn--gold rg-popup__cta">Enviar</button>
       </form>
     </div>
@@ -473,13 +616,13 @@ const whatsappAuditoria = 'https://wa.me/5531982976006?text=Oi%2C%20quero%20o%20
   <Footer />
 
   <!-- WHATSAPP FLUTUANTE -->
-  <a href="https://wa.me/5531982976006?text=Oi%2C%20quero%20saber%20mais%20sobre%20o%20Resgate%20seu%20Google" class="rg-wafloat" data-wa-pos="wafloat" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <a href="https://wa.me/551152865757?text=Oi%2C%20quero%20saber%20mais%20sobre%20o%20Resgate%20seu%20Google" class="rg-wafloat" target="_blank" rel="noopener" aria-label="WhatsApp">
     <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 
   <!-- BARRA FIXA MOBILE -->
   <div class="rg-stickybar">
-    <a href={whatsappHref} target="_blank" rel="noopener" class="rg-stickybar__btn" data-wa-pos="stickybar">Falar no WhatsApp</a>
+    <a href={whatsappHref} target="_blank" rel="noopener" class="rg-stickybar__btn">Falar no WhatsApp</a>
   </div>
 </Base>
 
@@ -489,7 +632,7 @@ const whatsappAuditoria = 'https://wa.me/5531982976006?text=Oi%2C%20quero%20o%20
   "@type": "Service",
   "name": "Resgate seu Google — Nitai Lab",
   "description": "Gestão profissional do Google Meu Negócio para negócios locais. Otimização completa do perfil, publicações semanais, respostas de avaliações e relatório mensal.",
-  "provider": { "@type": "Organization", "name": "Nitai Lab", "url": "https://nitailab.com.br" },
+  "provider": { "@type": "Organization", "name": "Nitai Lab", "url": "https://resgateseugoogle.nitailab.com.br" },
   "areaServed": { "@type": "Country", "name": "BR" },
   "serviceType": "Gestão de Google Meu Negócio"
 })} />
@@ -504,12 +647,12 @@ const whatsappAuditoria = 'https://wa.me/5531982976006?text=Oi%2C%20quero%20o%20
     { "@type": "Question", "name": "Nem sei se tenho perfil no Google", "acceptedAnswer": { "@type": "Answer", "text": "Tem. O Google cria um para todo negócio com endereço físico. A gente localiza e assume." }},
     { "@type": "Question", "name": "Vocês precisam da minha senha do Google?", "acceptedAnswer": { "@type": "Answer", "text": "Não. Você adiciona a gente como gestor do perfil. Leva 2 minutos, você mantém o controle total." }},
     { "@type": "Question", "name": "Quanto custa?", "acceptedAnswer": { "@type": "Answer", "text": "Planos diferentes dependendo do tamanho do negócio e da concorrência na cidade. Fale no WhatsApp para receber a proposta adequada." }},
-    { "@type": "Question", "name": "Tem contrato ou multa?", "acceptedAnswer": { "@type": "Answer", "text": "Sem contrato longo e sem multa. Garantia de continuidade: se a meta de descoberta combinada não vier e o cliente tiver feito a parte dele, a Nitai Lab segue trabalhando sem cobrar até vir." }},
-    { "@type": "Question", "name": "Quando começa a aparecer?", "acceptedAnswer": { "@type": "Answer", "text": "Na primeira semana o perfil já fica completo. Os primeiros sinais de gente nova achando o seu negócio aparecem em 30 dias." }},
-    { "@type": "Question", "name": "O que está incluso?", "acceptedAnswer": { "@type": "Answer", "text": "Auditoria de 30 pontos, descrição reescrita com palavras da cidade, categorias e serviços ajustados, fotos organizadas, 4 publicações por mês, todas as avaliações respondidas, relatório mensal e alerta de avaliação negativa. Foco exclusivo no seu perfil do Google." }},
+    { "@type": "Question", "name": "Tem contrato ou multa?", "acceptedAnswer": { "@type": "Answer", "text": "Sem contrato longo, sem multa, sem letra miúda. Garantia de 120 dias: se a quantidade de gente nova te encontrando no Google não dobrar, devolvemos tudo (setup e mensalidades). Você confere o número direto no painel do Google." }},
+    { "@type": "Question", "name": "Quando começa a aparecer?", "acceptedAnswer": { "@type": "Answer", "text": "Na primeira semana o seu Google já está organizado. O movimento começa a aparecer aos poucos — primeiros sinais (mais gente vendo o perfil) em 30-45 dias. O salto firme — quando a descoberta dobra — é o que buscamos em 120 dias. Mais curto que isso, ninguém promete nada honesto." }},
+    { "@type": "Question", "name": "O que está incluso?", "acceptedAnswer": { "@type": "Answer", "text": "Análise de 30 pontos do perfil, descrição reescrita com as palavras que o pessoal da cidade pesquisa, categorias e serviços ajustados, fotos organizadas, 4 publicações por mês, todas as avaliações respondidas, relatório mensal em linguagem humana e alerta de avaliação negativa. Foco exclusivo em Google Meu Negócio." }},
     { "@type": "Question", "name": "Quem responde as avaliações?", "acceptedAnswer": { "@type": "Answer", "text": "A Nitai Lab. Cada resposta personalizada no tom do negócio. Cliente pode revisar antes se quiser." }},
     { "@type": "Question", "name": "E se vier uma avaliação negativa?", "acceptedAnswer": { "@type": "Answer", "text": "Respondemos antes que o próximo cliente leia, com tom profissional. Avaliação negativa bem respondida vende mais que cinco estrelas sem resposta." }},
-    { "@type": "Question", "name": "Anúncio no Google está incluso?", "acceptedAnswer": { "@type": "Answer", "text": "Não. O foco é o tráfego orgânico — aparecer sem pagar por clique." }}
+    { "@type": "Question", "name": "Anúncio pago está incluso?", "acceptedAnswer": { "@type": "Answer", "text": "Não. O foco é o jeito orgânico — você aparece porque seu Google está bem feito, não porque está pagando por cada pessoa que vê." }}
   ]
 })} />
 
@@ -523,7 +666,7 @@ const whatsappAuditoria = 'https://wa.me/5531982976006?text=Oi%2C%20quero%20o%20
      Persona: Seu Zé do Balcão
      Override escopado: cascateia nos blocos .rg-* e elementos filhos
      ============================ */
-  body:has(.rg-hero__mock) {
+  body:has(.rg-hero) {
     --maps-red: #EA4335;
     --maps-yellow: #FFCC00;
     --maps-blue: #4285F4;
@@ -609,6 +752,15 @@ const whatsappAuditoria = 'https://wa.me/5531982976006?text=Oi%2C%20quero%20o%20
     overflow: hidden;
   }
 
+  .rg-hero__bg-map {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
   .rg-hero__mapgrid {
     position: absolute;
     inset: 0;
@@ -627,30 +779,112 @@ const whatsappAuditoria = 'https://wa.me/5531982976006?text=Oi%2C%20quero%20o%20
     position: relative;
     z-index: 2;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.1fr 0.9fr;
     align-items: center;
+    gap: 64px;
     min-height: calc(100svh - 64px);
-    max-width: 1120px;
+    max-width: 1180px;
     margin: 0 auto;
     padding: 0 48px;
-    gap: 48px;
   }
 
   .rg-hero__inner {
     padding: 60px 0;
-  }
-
-  .rg-hero__pinblock {
-    margin-bottom: 20px;
+    max-width: 600px;
     opacity: 0;
-    animation: rgPinDrop 0.6s ease 0.2s both;
+    animation: rgFade 0.7s ease 0.1s forwards;
   }
 
-  .rg-hero__pin {
+  /* MOCKUP CELULAR Maps — DIREITA do hero */
+  .rg-hero__phone {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    opacity: 0;
+    animation: rgFade 0.9s ease 0.4s forwards;
+  }
+
+  .rg-hero__phone-svg {
     display: block;
-    width: 44px;
+    width: 100%;
+    max-width: 360px;
     height: auto;
-    filter: drop-shadow(0 4px 16px rgba(160, 120, 64, 0.5));
+    filter: drop-shadow(0 24px 40px rgba(0, 0, 0, 0.45));
+    transform: rotate(-2deg);
+    transition: transform 0.4s ease;
+  }
+
+  .rg-hero__phone-svg:hover {
+    transform: rotate(0deg) scale(1.02);
+  }
+
+  .rg-hero__cta-helper {
+    margin-top: 14px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 300;
+    color: var(--soft);
+    opacity: 0.75;
+    line-height: 1.5;
+    max-width: 440px;
+  }
+
+  .rg-hero__cta-alt {
+    display: inline-block;
+    margin-top: 16px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--soft);
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .rg-hero__cta-alt:hover {
+    color: var(--bg);
+    border-bottom-color: var(--bg);
+  }
+
+  @keyframes rgFade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Mobile: colapsa pra 1-col, esconde celular gigante */
+  @media (max-width: 960px) {
+    .rg-hero__layout {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      padding: 0 24px;
+    }
+    .rg-hero__inner {
+      padding: 40px 0 0;
+      max-width: 100%;
+      text-align: center;
+      margin: 0 auto;
+    }
+    .rg-hero__phone {
+      max-width: 280px;
+      margin: 0 auto;
+      padding: 0 0 40px;
+    }
+    .rg-hero__phone-svg {
+      max-width: 280px;
+    }
+    .rg-hero__cta-helper {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .rg-hero__phone {
+      max-width: 240px;
+    }
   }
 
   .rg-hero__inner .eyebrow {
@@ -661,20 +895,23 @@ const whatsappAuditoria = 'https://wa.me/5531982976006?text=Oi%2C%20quero%20o%20
 
   .rg-hero__h1 {
     font-family: 'Urbanist', sans-serif;
-    font-weight: 800;
-    font-size: clamp(32px, 4.5vw, 58px);
-    line-height: 0.95;
-    letter-spacing: -0.04em;
+    font-weight: 600;
+    font-size: clamp(26px, 3.6vw, 44px);
+    line-height: 1.15;
+    letter-spacing: -0.015em;
     color: var(--bg);
     opacity: 0;
     animation: rgUp 0.7s ease 0.3s forwards;
+    text-wrap: balance;
   }
 
   .rg-hero__h1 em {
     font-style: normal;
+    font-weight: 800;
     color: var(--gold);
     display: block;
-    margin-top: 0.12em;
+    margin-top: 0.4em;
+    letter-spacing: -0.02em;
   }
 
   .rg-hero__sub {
@@ -944,7 +1181,8 @@ const whatsappAuditoria = 'https://wa.me/5531982976006?text=Oi%2C%20quero%20o%20
   }
 
   .rg-entrega__setup,
-  .rg-entrega__recorrente {
+  .rg-entrega__recorrente,
+  .rg-entrega__horizon {
     border: 1px solid var(--bdr);
     border-left: 3px solid var(--gold);
     background: var(--bg);
@@ -953,14 +1191,22 @@ const whatsappAuditoria = 'https://wa.me/5531982976006?text=Oi%2C%20quero%20o%20
     border-radius: 0 8px 8px 0;
   }
 
+  .rg-entrega__horizon--gold {
+    border: 2px solid var(--gold);
+    border-left: 6px solid var(--gold);
+    background: linear-gradient(180deg, var(--bg) 0%, rgba(234, 67, 53, 0.04) 100%);
+  }
+
   .rg-entrega__setup h3,
-  .rg-entrega__recorrente h3 {
+  .rg-entrega__recorrente h3,
+  .rg-entrega__horizon h3 {
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
     gap: 12px;
+    flex-wrap: wrap;
   }
 
   .rg-entrega__tag {
@@ -975,14 +1221,21 @@ const whatsappAuditoria = 'https://wa.me/5531982976006?text=Oi%2C%20quero%20o%20
     border-radius: 100px;
   }
 
+  .rg-entrega__tag--gold {
+    background: var(--gold);
+    color: #fff;
+  }
+
   .rg-entrega__setup ul,
-  .rg-entrega__recorrente ul {
+  .rg-entrega__recorrente ul,
+  .rg-entrega__horizon ul {
     list-style: none;
     padding: 0;
   }
 
   .rg-entrega__setup li,
-  .rg-entrega__recorrente li {
+  .rg-entrega__recorrente li,
+  .rg-entrega__horizon li {
     font-family: 'Outfit', sans-serif;
     font-size: 15px;
     font-weight: 300;
@@ -993,7 +1246,8 @@ const whatsappAuditoria = 'https://wa.me/5531982976006?text=Oi%2C%20quero%20o%20
   }
 
   .rg-entrega__setup li::before,
-  .rg-entrega__recorrente li::before {
+  .rg-entrega__recorrente li::before,
+  .rg-entrega__horizon li::before {
     content: '';
     position: absolute;
     left: 2px;
@@ -1005,8 +1259,103 @@ const whatsappAuditoria = 'https://wa.me/5531982976006?text=Oi%2C%20quero%20o%20
     opacity: 0.7;
   }
 
-  .rg-entrega__recorrente li strong {
+  .rg-entrega__recorrente li strong,
+  .rg-entrega__horizon li strong {
     color: var(--dark);
+    font-weight: 600;
+  }
+
+  /* BÔNUS */
+  .rg-entrega__bonus {
+    margin-top: 56px;
+    padding-top: 40px;
+    border-top: 1px dashed var(--bdr);
+  }
+
+  .rg-entrega__bonus-title {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .rg-entrega__bonus-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .rg-entrega__bonus-card {
+    background: var(--bg);
+    border: 1px solid var(--bdr);
+    border-radius: 12px;
+    padding: 28px 24px;
+    position: relative;
+  }
+
+  .rg-entrega__bonus-tag {
+    display: inline-block;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: rgba(234, 67, 53, 0.08);
+    padding: 4px 10px;
+    border-radius: 100px;
+    margin-bottom: 14px;
+  }
+
+  .rg-entrega__bonus-card h4 {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+
+  .rg-entrega__bonus-card p {
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--mid);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .rg-entrega__bonus-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* COMPROMISSO 6 meses */
+  .rg-entrega__compromisso {
+    margin-top: 48px;
+    padding: 28px 32px;
+    background: var(--bg);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 8px 8px 0;
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.75;
+    color: var(--mid);
+  }
+
+  .rg-entrega__compromisso strong {
+    color: var(--dark);
+    font-weight: 600;
+  }
+
+  .rg-entrega__compromisso em {
+    color: var(--gold);
+    font-style: italic;
     font-weight: 400;
   }
 
@@ -1113,6 +1462,25 @@ const whatsappAuditoria = 'https://wa.me/5531982976006?text=Oi%2C%20quero%20o%20
     position: absolute;
     left: 0;
     color: var(--gold);
+  }
+
+  .rg-case__disclaimer {
+    margin-top: 24px;
+    padding: 18px 20px;
+    background: rgba(160, 120, 64, 0.06);
+    border-left: 2px solid var(--gold);
+    border-radius: 0 6px 6px 0;
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.65;
+    color: var(--mid);
+  }
+
+  .rg-case__disclaimer strong {
+    color: var(--dark);
+    font-weight: 600;
+    font-style: normal;
   }
 
   .rg-case__quote {
@@ -2283,8 +2651,6 @@ const whatsappAuditoria = 'https://wa.me/5531982976006?text=Oi%2C%20quero%20o%20
   }
 </style>
 
-<LpOrigemTracking />
-
 <script>
   (function() {
     const STORAGE_KEY = 'rg_popup_shown';
@@ -2397,13 +2763,169 @@ const whatsappAuditoria = 'https://wa.me/5531982976006?text=Oi%2C%20quero%20o%20
     // overlay não fecha — só X e botões
     if (formClose) formClose.addEventListener('click', hideForm);
 
-    // Form submit — tratado pelo script único de leads (diagForm/exitForm) abaixo
+    // Form submit
+    var form = document.getElementById('exitForm');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var data = {
+          nome: form.nome.value,
+          negocio: form.negocio.value,
+          cidade: form.cidade.value,
+          whatsapp: form.whatsapp.value,
+          timestamp: new Date().toISOString(),
+          source: 'exit_popup'
+        };
+
+        var leads = JSON.parse(localStorage.getItem('rg_leads') || '[]');
+        leads.push(data);
+        localStorage.setItem('rg_leads', JSON.stringify(leads));
+
+        // Fire Meta Pixel Lead event
+        if (typeof fbq === 'function') {
+          fbq('track', 'Lead', {
+            content_name: 'Resgate seu Google - Popup Exit',
+            content_category: 'GMN'
+          });
+        }
+
+        // Fire GA4 generate_lead event
+        if (typeof gtag === 'function') {
+          gtag('event', 'generate_lead', {
+            currency: 'BRL',
+            value: 497,
+            source: 'exit_popup'
+          });
+        }
+
+        // Try CF Worker (silent — pode falhar sem prejudicar fluxo)
+        fetch('https://nitailab-hub.nitailab.workers.dev/leads', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: data.nome,
+            business: data.negocio,
+            city: data.cidade,
+            phone: data.whatsapp,
+            source: 'resgate-google-popup',
+            page: window.location.href,
+            timestamp: data.timestamp
+          })
+        }).catch(function() {});
+
+        var box = formPopup.querySelector('.rg-popup__box');
+        box.innerHTML = '<div style="padding:20px 0;text-align:center;">' +
+          '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>' +
+          '<h3 style="font-family:Urbanist,sans-serif;font-size:22px;font-weight:800;color:var(--dark);margin:20px 0 8px;">Recebido!</h3>' +
+          '<p style="font-family:Outfit,sans-serif;font-size:15px;color:var(--mid);font-weight:300;">Te chamo no WhatsApp agora — abrindo numa nova aba.</p>' +
+          '</div>';
+
+        // Open WhatsApp with prefilled message
+        var msg = 'Oi! Sou ' + data.nome + ', do(a) ' + data.negocio +
+                  ' em ' + data.cidade + '. Quero a análise gratuita do meu Google.';
+        var waUrl = 'https://wa.me/551152865757?text=' + encodeURIComponent(msg);
+        setTimeout(function() {
+          window.open(waUrl, '_blank', 'noopener');
+        }, 800);
+
+        setTimeout(hideForm, 4000);
+      });
+    }
   })();
 </script>
 
-<LpLeadForms />
+<script>
+  // Diagnosis form handler
+  (function() {
+    var diagForm = document.getElementById('diagForm');
+    var diagOk = document.getElementById('diagOk');
+    if (!diagForm) return;
+
+    diagForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var data = {
+        nome: diagForm.nome.value,
+        negocio: diagForm.negocio.value,
+        cidade: diagForm.cidade.value,
+        whatsapp: diagForm.whatsapp.value,
+        timestamp: new Date().toISOString()
+      };
+
+      // Fire Meta Pixel Lead event
+      if (typeof fbq === 'function') {
+        fbq('track', 'Lead', {
+          content_name: 'Resgate seu Google - Diagnostico',
+          content_category: 'GMN'
+        });
+      }
+
+      // Fire GA4 generate_lead event
+      if (typeof gtag === 'function') {
+        gtag('event', 'generate_lead', {
+          currency: 'BRL',
+          value: 497,
+          source: 'diagnostico_form'
+        });
+      }
+
+      // Try CF Worker (silent — pode falhar sem prejudicar fluxo)
+      fetch('https://nitailab-hub.nitailab.workers.dev/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: data.nome,
+          business: data.negocio,
+          city: data.cidade,
+          phone: data.whatsapp,
+          source: 'resgate-google-diagnostico',
+          page: window.location.href,
+          timestamp: data.timestamp
+        })
+      }).catch(function() {});
+
+      // Save locally (backup)
+      var leads = JSON.parse(localStorage.getItem('rg_leads') || '[]');
+      leads.push(Object.assign({source: 'diagnostico'}, data));
+      localStorage.setItem('rg_leads', JSON.stringify(leads));
+
+      // Show confirmation immediately
+      diagForm.style.display = 'none';
+      diagOk.style.display = 'block';
+
+      // Open WhatsApp with prefilled message (so Nitai actually receives the lead)
+      var msg = 'Oi! Sou ' + data.nome + ', do(a) ' + data.negocio +
+                ' em ' + data.cidade + '. Quero a análise gratuita do meu Google.';
+      var waUrl = 'https://wa.me/551152865757?text=' + encodeURIComponent(msg);
+      setTimeout(function() {
+        window.open(waUrl, '_blank', 'noopener');
+      }, 800);
+    });
+  })();
+</script>
 
 <script is:inline>
+  // Meta Pixel — track checkout clicks
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[href*="pay.hotmart.com"]');
+    if (link && typeof fbq === 'function') {
+      fbq('track', 'InitiateCheckout', {
+        content_name: 'Resgate seu Google',
+        content_category: 'GMN',
+        value: 197.00,
+        currency: 'BRL'
+      });
+    }
+  });
+  // Track lead capture popup submission
+  document.addEventListener('submit', function(e) {
+    if (e.target.closest('.rg-popup__form') && typeof fbq === 'function') {
+      fbq('track', 'Lead', {
+        content_name: 'Resgate seu Google - Popup',
+        content_category: 'GMN'
+      });
+    }
+  }, true);
+
   // === INTELIGÊNCIA DE COMPORTAMENTO ===
   (function() {
     var maxScroll = 0;
