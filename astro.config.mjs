@@ -6,5 +6,5 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://resgateseugoogle.nitailab.com.br',
   base: '/',
-  integrations: [sitemap()],
+  integrations: [sitemap({ filter: (page) => !page.includes('/eu-37ja0k92rj') })],
 });
